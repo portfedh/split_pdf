@@ -1,6 +1,6 @@
 from PyPDF2 import PdfReader
 
-reader = PdfReader("meta.pdf")
+reader = PdfReader("input_file.pdf")
 
 meta = reader.metadata
 pages = len(reader.pages)
@@ -10,6 +10,3 @@ print(f"Full metadata: \n {meta}. \n")
 print(f"Creation date: {meta.creation_date}. \n")
 print(f"Modification date: {meta.modification_date}. \n")
 print(f"Producer: {meta.producer}. \n")
-
-
-

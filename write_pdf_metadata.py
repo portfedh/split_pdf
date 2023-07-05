@@ -1,6 +1,6 @@
 from PyPDF2 import PdfReader, PdfWriter
 
-reader = PdfReader("file.pdf")
+reader = PdfReader("input_file.pdf")
 writer = PdfWriter()
 
 # Add all pages to the writer
@@ -16,7 +16,7 @@ writer.add_metadata(
 )
 
 # Save the new PDF to a file
-with open("meta.pdf", "wb") as f:
+with open("output_file_with_metadata.pdf", "wb") as f:
     writer.write(f)
 
 
